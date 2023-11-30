@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/GroundFloor.obj-859a9010ebf888707a2cf3919609dbad.mesh"
+
+[deps]
+
+files=[ "res://.import/GroundFloor.obj-859a9010ebf888707a2cf3919609dbad.mesh" ]
+
+source_file="res://assets/modules/GroundFloor.obj"
+dest_files=[ "res://.import/GroundFloor.obj-859a9010ebf888707a2cf3919609dbad.mesh", "res://.import/GroundFloor.obj-859a9010ebf888707a2cf3919609dbad.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

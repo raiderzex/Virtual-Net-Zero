@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Greenhouse.obj-f935e70713acb71d25141dc562a44225.mesh"
+
+[deps]
+
+files=[ "res://.import/Greenhouse.obj-f935e70713acb71d25141dc562a44225.mesh" ]
+
+source_file="res://assets/modules/Greenhouse.obj"
+dest_files=[ "res://.import/Greenhouse.obj-f935e70713acb71d25141dc562a44225.mesh", "res://.import/Greenhouse.obj-f935e70713acb71d25141dc562a44225.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

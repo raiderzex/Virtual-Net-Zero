@@ -1,0 +1,289 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://assets/modules/Grass.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/modules/Greenhouse.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://assets/modules/Trees.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://assets/modules/Pavement.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://assets/modules/SolarPanels.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://assets/modules/Residential.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://assets/modules/GroundFloor.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://assets/modules/Office.obj" type="ArrayMesh" id=8]
+[ext_resource path="res://assets/modules/ForStacks.tres" type="Shape" id=9]
+[ext_resource path="res://assets/modules/Buildable.obj" type="ArrayMesh" id=10]
+[ext_resource path="res://assets/modules/Air Strip.obj" type="ArrayMesh" id=11]
+[ext_resource path="res://assets/modules/Road.obj" type="ArrayMesh" id=12]
+[ext_resource path="res://assets/modules/CarbonCapture.obj" type="ArrayMesh" id=13]
+[ext_resource path="res://assets/modules/Marketplace.obj" type="ArrayMesh" id=14]
+[ext_resource path="res://assets/modules/Reservoir.obj" type="ArrayMesh" id=15]
+[ext_resource path="res://assets/modules/Retail.obj" type="ArrayMesh" id=16]
+[ext_resource path="res://assets/modules/BiofuelPlant.obj" type="ArrayMesh" id=17]
+[ext_resource path="res://assets/modules/Bridge.obj" type="ArrayMesh" id=18]
+[ext_resource path="res://assets/modules/Hydroponics.obj" type="ArrayMesh" id=19]
+[ext_resource path="res://assets/modules/PoultryFarm.obj" type="ArrayMesh" id=20]
+[ext_resource path="res://game_modules/Physically Based (10)_001.material" type="Material" id=21]
+[ext_resource path="res://game_modules/Physically Based (2)_001.material" type="Material" id=22]
+[ext_resource path="res://game_modules/Physically Based (3)_002.material" type="Material" id=23]
+[ext_resource path="res://game_modules/Physically Based (2)_003.material" type="Material" id=24]
+[ext_resource path="res://assets/modules/WaterCapture.obj" type="ArrayMesh" id=25]
+
+[sub_resource type="BoxShape" id=19]
+extents = Vector3( 10, 2.5, 10 )
+
+[sub_resource type="BoxShape" id=25]
+extents = Vector3( 10, 2.5, 10 )
+
+[sub_resource type="BoxShape" id=38]
+extents = Vector3( 10, 2.5, 10 )
+
+[sub_resource type="BoxShape" id=50]
+extents = Vector3( 10, 2.5, 10 )
+
+[sub_resource type="BoxShape" id=56]
+extents = Vector3( 10, 2.5, 10 )
+
+[sub_resource type="BoxShape" id=57]
+extents = Vector3( 10, 2.5, 10 )
+
+[sub_resource type="BoxShape" id=58]
+extents = Vector3( 10, 2.5, 10 )
+
+[sub_resource type="BoxShape" id=59]
+extents = Vector3( 10, 2.5, 10 )
+
+[sub_resource type="BoxShape" id=60]
+extents = Vector3( 10, 2.5, 10 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Grass" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43122, 67.9102, -23.253 )
+mesh = ExtResource( 1 )
+
+[node name="StaticBody" type="StaticBody" parent="Grass"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Grass/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = SubResource( 19 )
+
+[node name="Greenhouse" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.0491, 67.9102, -23.253 )
+mesh = ExtResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="Greenhouse"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Greenhouse/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = SubResource( 25 )
+
+[node name="GroundFloor" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2314, 67.9102, -23.253 )
+mesh = ExtResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="GroundFloor"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="GroundFloor/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = ExtResource( 9 )
+
+[node name="Office" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2314, 67.9102, 8.7699 )
+mesh = ExtResource( 8 )
+
+[node name="StaticBody" type="StaticBody" parent="Office"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Office/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = ExtResource( 9 )
+
+[node name="Pavement" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 121.532, 67.9102, -23.253 )
+mesh = ExtResource( 4 )
+
+[node name="StaticBody" type="StaticBody" parent="Pavement"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Pavement/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = SubResource( 38 )
+
+[node name="Residential" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2314, 67.9102, 39.6682 )
+mesh = ExtResource( 6 )
+
+[node name="StaticBody" type="StaticBody" parent="Residential"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Residential/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = ExtResource( 9 )
+
+[node name="SolarPanels" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.4165, 67.9102, -23.253 )
+mesh = ExtResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="SolarPanels"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="SolarPanels/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = SubResource( 50 )
+
+[node name="Trees" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2314, 67.9102, -51.9873 )
+mesh = ExtResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Trees"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = SubResource( 56 )
+
+[node name="Air Strip" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.8119, 69.5163, 28.8563 )
+mesh = ExtResource( 11 )
+
+[node name="StaticBody" type="StaticBody" parent="Air Strip"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Air Strip/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = SubResource( 57 )
+
+[node name="Buildable" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7067, 69.5163, 28.8563 )
+mesh = ExtResource( 10 )
+
+[node name="StaticBody" type="StaticBody" parent="Buildable"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Buildable/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = SubResource( 58 )
+
+[node name="Road" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -107.546, 69.5163, 28.8563 )
+mesh = ExtResource( 12 )
+
+[node name="StaticBody" type="StaticBody" parent="Road"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Road/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = SubResource( 59 )
+
+[node name="CarbonCapture" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.221, 25, 79.478 )
+mesh = ExtResource( 13 )
+material/0 = ExtResource( 23 )
+
+[node name="StaticBody" type="StaticBody" parent="CarbonCapture"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="CarbonCapture/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = SubResource( 60 )
+
+[node name="BiofuelPlant" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56.253, 19.4395, 66.0529 )
+mesh = ExtResource( 17 )
+material/2 = ExtResource( 22 )
+material/3 = ExtResource( 22 )
+material/6 = ExtResource( 22 )
+material/7 = ExtResource( 22 )
+material/8 = ExtResource( 22 )
+
+[node name="StaticBody" type="StaticBody" parent="BiofuelPlant"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="BiofuelPlant/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = ExtResource( 9 )
+
+[node name="Bridge" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -114.598, 21.3228, 62.7236 )
+mesh = ExtResource( 18 )
+material/0 = ExtResource( 21 )
+
+[node name="StaticBody" type="StaticBody" parent="Bridge"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Bridge/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = ExtResource( 9 )
+
+[node name="Hydroponics" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -118.831, 14.0196, 13.7209 )
+mesh = ExtResource( 19 )
+material/1 = ExtResource( 24 )
+material/2 = ExtResource( 24 )
+material/3 = ExtResource( 24 )
+material/4 = ExtResource( 24 )
+material/5 = ExtResource( 24 )
+
+[node name="StaticBody" type="StaticBody" parent="Hydroponics"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Hydroponics/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = ExtResource( 9 )
+
+[node name="Marketplace" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -81.7557, 17.9895, 46.7171 )
+mesh = ExtResource( 14 )
+material/0 = ExtResource( 24 )
+
+[node name="StaticBody" type="StaticBody" parent="Marketplace"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Marketplace/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = ExtResource( 9 )
+
+[node name="PoultryFarm" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -72.2076, 34.4882, 25.3015 )
+mesh = ExtResource( 20 )
+material/1 = ExtResource( 24 )
+
+[node name="StaticBody" type="StaticBody" parent="PoultryFarm"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="PoultryFarm/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = ExtResource( 9 )
+
+[node name="Retail" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -91.6277, 26.4456, -24.5195 )
+mesh = ExtResource( 16 )
+
+[node name="StaticBody" type="StaticBody" parent="Retail"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="Retail/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = ExtResource( 9 )
+
+[node name="WaterCapture" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -96.4962, 0, 93.5734 )
+mesh = ExtResource( 25 )
+material/3 = ExtResource( 23 )
+
+[node name="StaticBody" type="StaticBody" parent="WaterCapture"]
+
+[node name="CollisionShape" type="CollisionShape" parent="WaterCapture/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = ExtResource( 9 )
+
+[node name="Reservoir" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 10, 10 )
+mesh = ExtResource( 15 )
+
+[node name="StaticBody" type="StaticBody" parent="Reservoir"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Reservoir/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
+shape = ExtResource( 9 )

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/GUI/Templates/Button.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Gotham_small.tres" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 11
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Module1" type="TextureRect"]
+margin_right = 120.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 55, 55 )
+expand = true
+stretch_mode = 6
+
+[node name="Button" type="Button" parent="."]
+margin_right = 120.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 120, 120 )
+mouse_filter = 1
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+flat = true
+clip_text = true
+icon_align = 1
+expand_icon = true
+script = ExtResource( 1 )
+
+[connection signal="mouse_entered" from="Button" to="Button" method="_on_Button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="Button" method="_on_Button_mouse_exited"]
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

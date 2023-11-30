@@ -1,0 +1,160 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/fonts/Gotham_16.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/GUI/ModuleSelector.gd" type="Script" id=2]
+[ext_resource path="res://assets/GUI/TurnEnd.gd" type="Script" id=3]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 1 )
+colors = PoolColorArray( 0.705882, 0.705882, 0.705882, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 0.27451, 0.27451, 0.27451, 1, 0.27451, 0.27451, 0.27451, 1 )
+
+[sub_resource type="GradientTexture2D" id=4]
+gradient = SubResource( 3 )
+
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0.467836 )
+colors = PoolColorArray( 0.27451, 0.27451, 0.27451, 1 )
+
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
+
+[node name="ModuleSelector" type="Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -400.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 2 )
+
+[node name="M" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 9
+size_flags_vertical = 9
+size_flags_stretch_ratio = 0.0
+
+[node name="ModulesContainer" type="NinePatchRect" parent="M"]
+margin_right = 400.0
+margin_bottom = 1080.0
+texture = SubResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="M/ModulesContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 10.0
+margin_right = -8.0
+margin_bottom = -10.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="V" type="VBoxContainer" parent="M/ModulesContainer/MarginContainer"]
+margin_right = 384.0
+margin_bottom = 1060.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Header" type="HBoxContainer" parent="M/ModulesContainer/MarginContainer/V"]
+margin_right = 384.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 0, 75 )
+mouse_filter = 2
+
+[node name="LeftMargin" type="Control" parent="M/ModulesContainer/MarginContainer/V/Header"]
+margin_right = 88.0
+margin_bottom = 75.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="TextureRect" parent="M/ModulesContainer/MarginContainer/V/Header"]
+margin_left = 92.0
+margin_right = 292.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 200, 0 )
+mouse_filter = 2
+texture = SubResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="M/ModulesContainer/MarginContainer/V/Header/Title"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 50 )
+custom_colors/font_color = Color( 0.862745, 0.862745, 0.862745, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Modules"
+align = 1
+valign = 1
+
+[node name="RightMargin" type="Control" parent="M/ModulesContainer/MarginContainer/V/Header"]
+margin_left = 296.0
+margin_right = 384.0
+margin_bottom = 75.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="M/ModulesContainer/MarginContainer/V"]
+margin_top = 79.0
+margin_right = 384.0
+margin_bottom = 1031.0
+mouse_filter = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="M/ModulesContainer/MarginContainer/V/ScrollContainer"]
+margin_right = 384.0
+margin_bottom = 952.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 80
+custom_constants/hseparation = 80
+columns = 3
+
+[node name="TurnEnd" type="TextureButton" parent="M/ModulesContainer/MarginContainer/V"]
+margin_top = 1035.0
+margin_right = 384.0
+margin_bottom = 1060.0
+rect_min_size = Vector2( 200, 25 )
+texture_normal = SubResource( 6 )
+expand = true
+script = ExtResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="M/ModulesContainer/MarginContainer/V/TurnEnd"]
+margin_right = 384.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 200, 25 )
+
+[node name="LMargin" type="Control" parent="M/ModulesContainer/MarginContainer/V/TurnEnd/HBoxContainer"]
+margin_right = 129.0
+margin_bottom = 25.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="M/ModulesContainer/MarginContainer/V/TurnEnd/HBoxContainer"]
+margin_left = 133.0
+margin_top = 1.0
+margin_right = 250.0
+margin_bottom = 23.0
+custom_colors/font_color = Color( 0.862745, 0.862745, 0.862745, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Next Turn"
+align = 1
+valign = 1
+
+[node name="RMargin" type="Control" parent="M/ModulesContainer/MarginContainer/V/TurnEnd/HBoxContainer"]
+margin_left = 254.0
+margin_right = 384.0
+margin_bottom = 25.0
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="M/ModulesContainer/MarginContainer/V/TurnEnd" to="M/ModulesContainer/MarginContainer/V/TurnEnd" method="_on_TurnEnd_pressed"]

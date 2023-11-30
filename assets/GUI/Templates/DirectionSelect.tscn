@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/fonts/Gotham_16.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/GUI/Grey.tres" type="Texture" id=2]
+[ext_resource path="res://assets/GUI/Templates/DirectionSelect.gd" type="Script" id=3]
+[ext_resource path="res://assets/GUI/Templates/DirectionOption.gd" type="Script" id=4]
+[ext_resource path="res://assets/fonts/Gotham_small.tres" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="DirectionSelect" type="Popup"]
+margin_right = 300.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 300, 100 )
+script = ExtResource( 3 )
+
+[node name="N" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+
+[node name="M" type="MarginContainer" parent="N"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+
+[node name="V" type="VBoxContainer" parent="N/M"]
+margin_right = 260.0
+margin_bottom = 60.0
+
+[node name="DirectionName" type="Label" parent="N/M/V"]
+margin_right = 260.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+custom_fonts/font = ExtResource( 1 )
+text = "Direction"
+align = 1
+valign = 1
+
+[node name="DirectionOption" type="OptionButton" parent="N/M/V"]
+margin_top = 34.0
+margin_right = 260.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 0, 25 )
+custom_fonts/font = SubResource( 1 )
+script = ExtResource( 4 )
+
+[connection signal="item_selected" from="N/M/V/DirectionOption" to="." method="_on_DirectionOption_item_selected"]

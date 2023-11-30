@@ -1,0 +1,101 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/GUI/BudgetLabel.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Gotham_16.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/GUI/TurnLabel.gd" type="Script" id=3]
+[ext_resource path="res://assets/GUI/VibrancyLabel.gd" type="Script" id=4]
+[ext_resource path="res://assets/GUI/ECarbonLabel.gd" type="Script" id=5]
+[ext_resource path="res://assets/GUI/OCarbonLabel.gd" type="Script" id=6]
+[ext_resource path="res://assets/GUI/TotalCarbonLabel.gd" type="Script" id=7]
+[ext_resource path="res://assets/GUI/WaterLabel.gd" type="Script" id=8]
+[ext_resource path="res://assets/GUI/FoodLabel.gd" type="Script" id=9]
+[ext_resource path="res://assets/GUI/EnergyLabel.gd" type="Script" id=10]
+
+[node name="ResourcesUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="M" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 10.0
+margin_right = -790.0
+margin_bottom = -10.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="M"]
+margin_right = 1122.0
+margin_bottom = 1060.0
+
+[node name="BudgetLabel" type="Label" parent="M/VBoxContainer"]
+margin_right = 1122.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 0, 20 )
+custom_fonts/font = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="TurnLabel" type="Label" parent="M/VBoxContainer"]
+margin_top = 26.0
+margin_right = 1122.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 0, 20 )
+custom_fonts/font = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="VibrancyLabel" type="Label" parent="M/VBoxContainer"]
+margin_top = 52.0
+margin_right = 1122.0
+margin_bottom = 74.0
+rect_min_size = Vector2( 0, 20 )
+custom_fonts/font = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="ECarbonLabel" type="Label" parent="M/VBoxContainer"]
+visible = false
+margin_top = 78.0
+margin_right = 1122.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 20 )
+custom_fonts/font = ExtResource( 2 )
+script = ExtResource( 5 )
+
+[node name="OCarbonLabel" type="Label" parent="M/VBoxContainer"]
+visible = false
+margin_top = 104.0
+margin_right = 1122.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 0, 20 )
+custom_fonts/font = ExtResource( 2 )
+script = ExtResource( 6 )
+
+[node name="TotalCarbonLabel" type="Label" parent="M/VBoxContainer"]
+margin_top = 78.0
+margin_right = 1122.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 20 )
+custom_fonts/font = ExtResource( 2 )
+script = ExtResource( 7 )
+
+[node name="EnergyLabel" type="Label" parent="M/VBoxContainer"]
+margin_top = 104.0
+margin_right = 1122.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 0, 20 )
+custom_fonts/font = ExtResource( 2 )
+script = ExtResource( 10 )
+
+[node name="WaterLabel" type="Label" parent="M/VBoxContainer"]
+margin_top = 130.0
+margin_right = 1122.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 0, 20 )
+custom_fonts/font = ExtResource( 2 )
+script = ExtResource( 8 )
+
+[node name="FoodLabel" type="Label" parent="M/VBoxContainer"]
+margin_top = 156.0
+margin_right = 1122.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 0, 20 )
+custom_fonts/font = ExtResource( 2 )
+script = ExtResource( 9 )
