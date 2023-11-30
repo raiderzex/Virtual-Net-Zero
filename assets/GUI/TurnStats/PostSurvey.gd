@@ -49,12 +49,12 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 func _on_CloseButton_button_up():
 	if $N/M/V/Q3A.text.length() == 0:
 		otherqn = "null"
-	var datasend = "?carbonScore="+carbonScore+"&energyScore="+energyScore+"&waterScore="+waterScore+"&foodScore="+foodScore+"&vibrancyScore="+vibrancyScore+"&surveyqn1="+surveyqn1+"&surveyqn2="+surveyqn2+"&otherqn="+otherqn+"&sheetname=EndGameData"
+	var datasend = "?carbonScore="+carbonScore+"&energyScore="+energyScore+"&waterScore="+waterScore+"&foodScore="+foodScore+"&vibrancyScore="+vibrancyScore+"&surveyqn1="+surveyqn1+"&surveyqn2="+surveyqn2+"&otherqn="+otherqn+"&image="+Global.screenshotUrl+"&sheetname=EndGameData"
 	var headers = ["Content-Length: 0"]
 	var posturl = apiurl+datasend
 	$HTTPRequest.request(posturl,headers,true,HTTPClient.METHOD_POST)
 	print("Done")
-	yield(get_tree().create_timer(10), "timeout")
+	yield(get_tree().create_timer(5), "timeout")
 	get_tree().quit()
 
 

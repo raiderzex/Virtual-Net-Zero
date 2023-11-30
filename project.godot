@@ -24,11 +24,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/easy_charts/utilities/classes/structures/array_operations.gd"
 }, {
-"base": "Reference",
-"class": "AuthProvider",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/auth/auth_provider.gd"
-}, {
 "base": "Spatial",
 "class": "BackForthMovement",
 "language": "GDScript",
@@ -79,11 +74,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/silicon.util.custom_docs/doc_item/constant_doc_item.gd"
 }, {
-"base": "HBoxContainer",
-"class": "ContributorClass",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/ContributorClass.gd"
-}, {
 "base": "Resource",
 "class": "DataFrame",
 "language": "GDScript",
@@ -108,81 +98,6 @@ _global_script_classes=[ {
 "class": "ECUtilities",
 "language": "GDScript",
 "path": "res://addons/easy_charts/utilities/scripts/ec_utilities.gd"
-}, {
-"base": "AuthProvider",
-"class": "FacebookProvider",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/auth/providers/facebook.gd"
-}, {
-"base": "HTTPRequest",
-"class": "FirebaseAuth",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/auth/auth.gd"
-}, {
-"base": "Node",
-"class": "FirebaseDatabase",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/database/database.gd"
-}, {
-"base": "Node",
-"class": "FirebaseDatabaseReference",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/database/reference.gd"
-}, {
-"base": "Node",
-"class": "FirebaseDatabaseStore",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/database/database_store.gd"
-}, {
-"base": "Node",
-"class": "FirebaseDynamicLinks",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/dynamiclinks/dynamiclinks.gd"
-}, {
-"base": "Node",
-"class": "FirebaseFirestore",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/firestore/firestore.gd"
-}, {
-"base": "Node",
-"class": "FirebaseFunctions",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/functions/functions.gd"
-}, {
-"base": "Resource",
-"class": "FirebaseResource",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/database/resource.gd"
-}, {
-"base": "Node",
-"class": "FirebaseStorage",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/storage/storage.gd"
-}, {
-"base": "Reference",
-"class": "FirebaseUserData",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/auth/user_data.gd"
-}, {
-"base": "Reference",
-"class": "FirestoreCollection",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/firestore/firestore_collection.gd"
-}, {
-"base": "Reference",
-"class": "FirestoreDocument",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/firestore/firestore_document.gd"
-}, {
-"base": "Reference",
-"class": "FirestoreQuery",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/firestore/firestore_query.gd"
-}, {
-"base": "Reference",
-"class": "FirestoreTask",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/firestore/firestore_task.gd"
 }, {
 "base": "Spatial",
 "class": "Follow",
@@ -209,40 +124,15 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/easy_charts/control_charts/plotters/function_plotter.gd"
 }, {
-"base": "Reference",
-"class": "FunctionTask",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/functions/function_task.gd"
-}, {
 "base": "Label",
 "class": "FunctionTypeLabel",
 "language": "GDScript",
 "path": "res://addons/easy_charts/utilities/containers/legend/function_type.gd"
 }, {
-"base": "PanelContainer",
-"class": "GistItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/GistItem.gd"
-}, {
-"base": "AuthProvider",
-"class": "GitHubProvider",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/auth/providers/github.gd"
-}, {
-"base": "AuthProvider",
-"class": "GoogleProvider",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/auth/providers/google.gd"
-}, {
 "base": "Control",
 "class": "GridBox",
 "language": "GDScript",
 "path": "res://addons/easy_charts/utilities/containers/canvas/plot_box/grid_box.gd"
-}, {
-"base": "HBoxContainer",
-"class": "InvitationItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/InvitationItem.gd"
 }, {
 "base": "ScatterPlotter",
 "class": "LinePlotter",
@@ -299,11 +189,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/silicon.util.custom_docs/doc_item/property_doc_item.gd"
 }, {
-"base": "PanelContainer",
-"class": "RepositoryItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/RepositoryItem.gd"
-}, {
 "base": "FunctionPlotter",
 "class": "ScatterPlotter",
 "language": "GDScript",
@@ -324,25 +209,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/virtualcamera/TransformModifiers/SnapToPath.gd"
 }, {
-"base": "Reference",
-"class": "StorageReference",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/storage/storage_reference.gd"
-}, {
-"base": "Reference",
-"class": "StorageTask",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/storage/storage_task.gd"
-}, {
 "base": "Spatial",
 "class": "TransformModifier",
 "language": "GDScript",
 "path": "res://addons/virtualcamera/TransformModifiers/TransformModifier.gd"
-}, {
-"base": "AuthProvider",
-"class": "TwitterProvider",
-"language": "GDScript",
-"path": "res://addons/godot-firebase/auth/providers/twitter.gd"
 }, {
 "base": "Spatial",
 "class": "UniformMovement",
@@ -378,7 +248,6 @@ _global_script_class_icons={
 "AreaPlotter": "",
 "ArgumentDocItem": "",
 "ArrayOperations": "",
-"AuthProvider": "",
 "BackForthMovement": "",
 "Bar": "",
 "BarPlotter": "",
@@ -389,39 +258,18 @@ _global_script_class_icons={
 "ChartProperties": "",
 "ClassDocItem": "",
 "ConstantDocItem": "",
-"ContributorClass": "",
 "DataFrame": "",
 "DataTooltip": "",
 "DocExporter": "",
 "DocItem": "",
 "ECUtilities": "",
-"FacebookProvider": "",
-"FirebaseAuth": "",
-"FirebaseDatabase": "",
-"FirebaseDatabaseReference": "",
-"FirebaseDatabaseStore": "",
-"FirebaseDynamicLinks": "",
-"FirebaseFirestore": "",
-"FirebaseFunctions": "",
-"FirebaseResource": "",
-"FirebaseStorage": "",
-"FirebaseUserData": "",
-"FirestoreCollection": "",
-"FirestoreDocument": "",
-"FirestoreQuery": "",
-"FirestoreTask": "",
 "Follow": "",
 "Function": "",
 "FunctionLabel": "",
 "FunctionLegend": "",
 "FunctionPlotter": "",
-"FunctionTask": "",
 "FunctionTypeLabel": "",
-"GistItem": "",
-"GitHubProvider": "",
-"GoogleProvider": "",
 "GridBox": "",
-"InvitationItem": "",
 "LinePlotter": "",
 "LookAt": "",
 "LookAtGroup": "",
@@ -433,15 +281,11 @@ _global_script_class_icons={
 "PlotBox": "",
 "Point": "",
 "PropertyDocItem": "",
-"RepositoryItem": "",
 "ScatterPlotter": "",
 "Shake": "",
 "SignalDocItem": "",
 "SnapToPath": "",
-"StorageReference": "",
-"StorageTask": "",
 "TransformModifier": "res://addons/virtualcamera/TransformModifiers/TransformModifier.svg",
-"TwitterProvider": "",
 "UniformMovement": "",
 "UniformRotation": "",
 "UniformTranslation": "",
@@ -452,7 +296,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Testbed"
+config/name="Virtual Net-Zero"
 run/main_scene="res://SceneOne.tscn"
 config/icon="res://icon.png"
 
@@ -476,7 +320,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/CADLikeOrbit_Camera/plugin.cfg", "res://addons/easy_charts/plugin.cfg", "res://addons/github-integration/plugin.cfg", "res://addons/godot-firebase/plugin.cfg", "res://addons/http-sse-client/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/CADLikeOrbit_Camera/plugin.cfg", "res://addons/easy_charts/plugin.cfg", "res://addons/http-sse-client/plugin.cfg" )
 
 [gui]
 

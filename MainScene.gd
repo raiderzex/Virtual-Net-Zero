@@ -31,7 +31,6 @@ func _process(_delta):
 		print("yes")
 		var image = $ViewportContainer/Camera.get_viewport().get_texture().get_data()
 		image.flip_y()
-		image.save_png("user://images/screenshot.png")
-		image.save_png("C://VirtualNetZero/screenshot.png")
-		Global.imageSS = image
+		Global.imageSS = str(Time.get_datetime_string_from_system().replace(":","-") + ".png")
+		image.save_png(str("res://data/" + Global.imageSS))
 		Global.takeScreenshot = false

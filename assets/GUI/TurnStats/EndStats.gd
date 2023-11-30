@@ -3,16 +3,12 @@ extends Popup
 var chartsUI = preload("res://assets/GUI/TurnStats/ChartsUI.tscn")
 var postUI = preload("res://assets/GUI/TurnStats/PostSurvey.tscn")
 
-var image = load("res://data/screenshot.png")
-var imageConverted
-
 # Replace with API url here
-var imgapiurl = "IMGBB API"
+var imgapiurl = "API for ImgBB here"
 
 func _make_post_request(url, data_to_send, use_ssl):
 	var query = JSON.print(data_to_send)
-	print(query)
-	var headers=["Content-Type: multipart/form-data"]
+	var headers=["Content-Type: multipart/form-data;boundary=\"WebKitFormBoundaryePkpFF7tjBAqx29L\""]
 	$HTTPRequest.request(url, headers, true, HTTPClient.METHOD_POST, query)
 
 # Called when the node enters the scene tree for the first time.
@@ -30,13 +26,34 @@ func _on_StatsButton_button_up():
 		get_node("ChartsUI").show()
 
 func _on_CloseButton_button_up():
-	imageConverted = Marshalls.variant_to_base64(image, true)
-	print(imageConverted)
-	_make_post_request(imgapiurl, imageConverted, false)
+	
+	var image = File.new()
+	
+	#for troubleshooting
+#	image.open("res://data/screenshot.png", File.READ)
+	image.open(str("res://data/" + Global.imageSS), File.READ)
+
+	var imageConverted = image.get_buffer(image.get_len())
+	var body = PoolByteArray()
+	body.append_array("\r\n--WebKitFormBoundaryePkpFF7tjBAqx29L\r\n".to_utf8())
+	
+	#for troubleshooting
+#	body.append_array(str("Content-Disposition: form-data; name=\"image\"; filename=\"screenshot.png\r\n").to_utf8())
+	body.append_array(str("Content-Disposition: form-data; name=\"image\"; filename=\"" + Global.imageSS + "\r\n").to_utf8())
+	
+	body.append_array("Content-Type: image/png\r\n\r\n".to_utf8())
+	body.append_array(imageConverted)
+	body.append_array("\r\n--WebKitFormBoundaryePkpFF7tjBAqx29L--\r\n".to_utf8())
+	var headers = ["Authorization: Basic <key removed>", "Content-Type: multipart/form-data;boundary=\"WebKitFormBoundaryePkpFF7tjBAqx29L\""]
+	var http = $HTTPRequest
+	var err = http.request_raw(imgapiurl, headers, true, HTTPClient.METHOD_POST, body)
+	yield(get_tree().create_timer(3), "timeout")
 	add_child(postUI.instance())
 	if has_node("PostSurvey"):
 		get_node("PostSurvey").show()
 	self.hide()
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
-	print(body.get_string_from_utf8())
+	var fullresponse = parse_json(body.get_string_from_utf8())
+	Global.screenshotUrl = str(fullresponse.data.url)
+	print(fullresponse.data.url)

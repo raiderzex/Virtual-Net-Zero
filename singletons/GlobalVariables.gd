@@ -37,6 +37,7 @@ var bridgeDirection: int = 1;
 
 var takeScreenshot: bool = false;
 var imageSS;
+var screenshotUrl;
 
 func _process(delta):
 	remaining = int(Global.budget_list[int(turn_count - 1)])
