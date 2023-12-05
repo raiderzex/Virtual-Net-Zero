@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/fonts/Gotham_20.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/GUI/Grey.tres" type="Texture" id=2]
-[ext_resource path="res://assets/GUI/TurnStats/TurnName.gd" type="Script" id=3]
+[ext_resource path="res://assets/GUI/TurnStats/StatsName.gd" type="Script" id=3]
 [ext_resource path="res://assets/GUI/TurnStats/ChartsUI.gd" type="Script" id=4]
 [ext_resource path="res://assets/fonts/Gotham_16.tres" type="DynamicFont" id=5]
 
@@ -45,7 +45,7 @@ margin_right = 246.0
 margin_bottom = 75.0
 size_flags_horizontal = 3
 
-[node name="TurnName" type="Label" parent="N/M/V/H1"]
+[node name="StatsName" type="Label" parent="N/M/V/H1"]
 margin_left = 250.0
 margin_top = 12.0
 margin_right = 650.0

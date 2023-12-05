@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/GUI/BudgetLabel.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/Gotham_16.tres" type="DynamicFont" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/GUI/WaterLabel.gd" type="Script" id=8]
 [ext_resource path="res://assets/GUI/FoodLabel.gd" type="Script" id=9]
 [ext_resource path="res://assets/GUI/EnergyLabel.gd" type="Script" id=10]
+[ext_resource path="res://assets/GUI/PopulationLabel.gd" type="Script" id=11]
 
 [node name="ResourcesUI" type="Control"]
 anchor_right = 1.0
@@ -99,3 +100,11 @@ margin_bottom = 178.0
 rect_min_size = Vector2( 0, 20 )
 custom_fonts/font = ExtResource( 2 )
 script = ExtResource( 9 )
+
+[node name="PopulationLabel" type="Label" parent="M/VBoxContainer"]
+margin_top = 182.0
+margin_right = 1122.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 0, 20 )
+custom_fonts/font = ExtResource( 2 )
+script = ExtResource( 11 )

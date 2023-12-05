@@ -8,6 +8,7 @@ var energyScore = str(Global.energyConsumption)
 var waterScore = str(Global.waterConsumption)
 var foodScore = str(Global.foodConsumption)
 var vibrancyScore = str(Global.vibrancy)
+var populationScore = str(Global.population_score)
 var surveyqn1 = "Yes"
 var surveyqn2 = "Yes"
 var otherqn = ""
@@ -49,7 +50,7 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 func _on_CloseButton_button_up():
 	if $N/M/V/Q3A.text.length() == 0:
 		otherqn = "null"
-	var datasend = "?carbonScore="+carbonScore+"&energyScore="+energyScore+"&waterScore="+waterScore+"&foodScore="+foodScore+"&vibrancyScore="+vibrancyScore+"&surveyqn1="+surveyqn1+"&surveyqn2="+surveyqn2+"&otherqn="+otherqn+"&image="+Global.screenshotUrl+"&sheetname=EndGameData"
+	var datasend = "?carbonScore="+carbonScore+"&energyScore="+energyScore+"&waterScore="+waterScore+"&foodScore="+foodScore+"&vibrancyScore="+vibrancyScore+"&surveyqn1="+surveyqn1+"&surveyqn2="+surveyqn2+"&otherqn="+otherqn+"&populationScore="+populationScore+"&image="+Global.screenshotUrl+"&sheetname=EndGameData"
 	var headers = ["Content-Length: 0"]
 	var posturl = apiurl+datasend
 	$HTTPRequest.request(posturl,headers,true,HTTPClient.METHOD_POST)

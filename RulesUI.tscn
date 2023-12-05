@@ -47,9 +47,12 @@ Controls: Left click to select a module
 Left click on map to place module
 Right click to remove module
 
-Right drag to zoom
+For Bridge module, a popup to select direction of placement will appear.
+The direction is relative to the initial map position, default to front each time the module is selected. The popup will disappear after 5 seconds.
+
+Hold Ctrl key and move mouse up/down to zoom
 Middle drag to pan
-Hold Shift key to rotate
+Hold Shift key and move mouse to rotate
 
 The goal of this game is to create a net-zero city within a span of 30 years. There is a limited budget each year, so choose your modules wisely and build an ideal city.
 
@@ -62,9 +65,12 @@ Controls: Left click to select a module
 Left click on map to place module
 Right click to remove module
 
-Right drag to zoom
+For Bridge module, a popup to select direction of placement will appear.
+The direction is relative to the initial map position, default to front each time the module is selected. The popup will disappear after 5 seconds.
+
+Hold Ctrl key and move mouse up/down to zoom
 Middle drag to pan
-Hold Shift key to rotate
+Hold Shift key and move mouse to rotate
 
 The goal of this game is to create a net-zero city within a span of 30 years. There is a limited budget each year, so choose your modules wisely and build an ideal city.
 

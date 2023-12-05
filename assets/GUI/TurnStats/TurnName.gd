@@ -1,7 +1,7 @@
 extends Label
 
 func _process(delta):
-	self.text = str("Select a resource to see yearly trends")
+	self.text = str("Statistics for year " + str(Global.turn_count + 2023))
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

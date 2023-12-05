@@ -1,7 +1,7 @@
 extends Label
 
 func _process(delta):
-	self.text = str("Congratulations on finishing the game!")
+	self.text = str("Current population : " + str(Global.population_score))
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
