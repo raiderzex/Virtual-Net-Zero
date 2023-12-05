@@ -31,7 +31,7 @@ func _on_CloseButton_button_up():
 	
 	#for troubleshooting
 #	image.open("res://data/screenshot.png", File.READ)
-	image.open(str("res://data/" + Global.imageSS), File.READ)
+	image.open(str("user://" + Global.imageSS), File.READ)
 
 	var imageConverted = image.get_buffer(image.get_len())
 	var body = PoolByteArray()
